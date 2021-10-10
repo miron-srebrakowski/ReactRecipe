@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+        "mongodb+srv://mrvice:miron1998@recipies.m1j0r.mongodb.net/Recipies?retryWrites=true&w=majority"
+}

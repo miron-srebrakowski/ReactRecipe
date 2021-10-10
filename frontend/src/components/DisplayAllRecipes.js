@@ -25,7 +25,7 @@ export default function DisplayAllRecipes () {
 
             <div className="row">
                 {recipes.map((recipe) => (
-                    <RecipeCard recipe={recipe} />
+                    <RecipeCard key={recipe.id} recipe={recipe} />
                 ))}  
             </div>
         

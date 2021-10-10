@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 
 export default function RecipeCard (props) {
@@ -17,13 +17,13 @@ export default function RecipeCard (props) {
                 <div className="text-right">
                     <ul>
                         {props.recipe.ingredients.map((ingredient) => (
-                            <li>{ingredient}</li>
+                            <li key={ingredient}>{ingredient}</li>
                         ))}
                     </ul>
                     
                     <ol>
                         {props.recipe.method.map((step) => (
-                            <li>{step}</li>
+                            <li key={step}>{step}</li>
                         ))}
                     </ol>
                 </div>

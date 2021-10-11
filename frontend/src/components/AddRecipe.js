@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 export default function AddRecipe () {
 
@@ -17,8 +18,23 @@ export default function AddRecipe () {
         };
         alert(JSON.stringify(data));
 
-        // CONNECT API TO POST INPUT DATA
-    }
+        axios.post('http://localhost:8082/api/recipes/create', data)
+        .then(res => {
+
+            //FIX API (probably in backend)
+        
+            console.log(res.data);
+
+        })
+        .catch(err => {
+            console.log("Error in AddRecipe!");
+        })
+
+        setTitle('');
+        setImage('');
+        setIngredient('');
+        setMethod('');
+    };
 
     return (
         <div className="container">

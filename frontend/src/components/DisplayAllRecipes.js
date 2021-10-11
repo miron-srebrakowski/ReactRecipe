@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import { Link } from 'react-router-dom';
-import { recipes } from "../data";
+import axios from "axios";
 
 export default function DisplayAllRecipes () {
+
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8082/api/recipes')
+        .then(res => {
+            setRecipes(recipes => [...recipes, res.data]);
+        })
+        .catch(err => {
+            console.log("Error in DisplayAllRecipes!");
+        })
+    }, [])
+
+    console.log("PrintRecipe: " + recipes);
+    let recipeList;
+
+    if (!recipes) {
+        recipeList = "No recipes on record!";
+    } else {
+        recipeList = recipes.map((recipe, key) => (
+            <RecipeCard key={key} recipe={recipe} />
+        ));
+    }
 
     return (
         <div className="container">
@@ -23,11 +46,7 @@ export default function DisplayAllRecipes () {
                 </Link>
             </div>
 
-            <div className="row">
-                {recipes.map((recipe) => (
-                    <RecipeCard key={recipe.id} recipe={recipe} />
-                ))}  
-            </div>
+            <div className="row">{ recipeList }</div>
         
             <footer className="page-footer">
                 <div className="text-center footer-copyright p-3">

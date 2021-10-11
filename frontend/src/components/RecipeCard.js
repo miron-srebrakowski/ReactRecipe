@@ -11,20 +11,19 @@ export default function RecipeCard (props) {
                 <img
                 src={props.recipe.image}
                 className="img-rounded img-responsive text-center m-2"
-                alt="recipe image"
+                alt="food"
                 />
 
                 <div className="text-right">
                     <ul>
-                        {props.recipe.ingredients.map((ingredient) => (
-                            <li key={ingredient}>{ingredient}</li>
-                        ))}
+                        
+                        <li >{props.recipe.ingredients}</li>
                     </ul>
                     
                     <ol>
-                        {props.recipe.method.map((step) => (
-                            <li key={step}>{step}</li>
-                        ))}
+                        
+                        <li >{props.recipe.method}</li>
+                        
                     </ol>
                 </div>
             </div>

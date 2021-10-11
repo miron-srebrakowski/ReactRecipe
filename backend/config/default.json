@@ -1,4 +1,4 @@
 {
     "mongoURI":
-        "###"
+        "mongodb+srv://mrvice:miron1998@recipedb.m1j0r.mongodb.net/RecipeDB?retryWrites=true&w=majority"
 }

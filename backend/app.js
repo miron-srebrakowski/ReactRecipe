@@ -3,7 +3,7 @@ const connectDB = require('./config/db');
 var cors = require('cors');
 
 // routes
-const books = require('./routes/api/books');
+const recipes = require('./routes/api/recipes.routes');
 
 const app = express();
 
@@ -16,10 +16,10 @@ app.use(cors({ origin: true, credentials: true }));
 // middleware
 app.use(express.json({ extended: false }));
 
-app.get('/', (req, res) => res.send('Hello world'));
+app.get('/', (req, res) => res.send('MongoDB running!'));
 
 // use Routes
-app.use('/api/books', books);
+app.use('/api/recipes', recipes);
 
 const port = process.env.PORT || 8082;
 

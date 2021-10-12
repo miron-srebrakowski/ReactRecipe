@@ -13,7 +13,7 @@ export default function App() {
     <Router>
       <div>
         <Route exact path="/" component={DisplayAllRecipes} />
-        <Route path="/add-recipe" component={AddRecipe} />
+        <Route path="/create-recipe" component={AddRecipe} />
       </div>
     </Router>
   );

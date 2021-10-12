@@ -8,12 +8,12 @@ export default function DisplayAllRecipes () {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8082/api/recipes')
+        axios.get('http://localhost:4000/recipes/')
         .then(res => {
-            setRecipes(recipes => [...recipes, res.data]);
+            setRecipes(res.data);
         })
         .catch(err => {
-            console.log("Error in DisplayAllRecipes!");
+            console.log("Error in DisplayAllRecipes!" + err);
         })
     }, [])
 
@@ -41,7 +41,7 @@ export default function DisplayAllRecipes () {
             </div>
 
             <div className="d-flex justify-content-center my-4">
-                <Link to="/add-recipe">
+                <Link to="/create-recipe">
                     <button className="btn btn-success">Add recipe</button>
                 </Link>
             </div>

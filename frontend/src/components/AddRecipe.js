@@ -9,26 +9,24 @@ export default function AddRecipe () {
     const [ingredient, setIngredient] = useState('');
     const [method, setMethod] = useState('');
 
-    const onSubmit = () => {
+    const handleSubmit = (e) => {
+
+        e.preventDefault();
+
         const data = {
             title: title,
             image: image,
             ingredients: ingredient,
             method: method,
         };
-        alert(JSON.stringify(data));
 
-        axios.post('http://localhost:8082/api/recipes/create', data)
-        .then(res => {
+        console.log(data);
 
-            //FIX API (probably in backend)
-        
-            console.log(res.data);
-
-        })
+        axios.post('http://localhost:4000/recipes/create-recipe', data)
+        .then(res => { console.log(res.data); })
         .catch(err => {
             console.log("Error in AddRecipe!");
-        })
+        });
 
         setTitle('');
         setImage('');
@@ -41,7 +39,7 @@ export default function AddRecipe () {
 
             <h4 className="text-center p-4">Add new recipe</h4>
 
-            <form onSubmit={() => onSubmit()}>
+            <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Recipe Name </label>
                     <input type="text" className="form-control" onChange={(e) => setTitle(e.target.value)} />

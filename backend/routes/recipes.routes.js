@@ -18,7 +18,7 @@ router.route('/create-recipe').post((req, res, next) => {
 });
 
 
-// READ Recipes
+// READ all Recipes
 router.route('/').get((req, res) => {
     recipeSchema.find((err, data) => {
         if (err) {
@@ -27,6 +27,26 @@ router.route('/').get((req, res) => {
             res.json(data);
         }
     })
+});
+
+
+// READ single Recipe
+router.route('/edit-recipe/:id').get((req, res) => {
+    recipeSchema.findById(req.params.id, (err, data) => {
+        if (err) {
+            return next(err);
+        } else {
+            res.json(data);
+        }
+    })
+});
+
+
+// DELETE Recipe
+router.delete('/delete-recipe/:id', (req, res) => {
+    recipeSchema.findByIdAndRemove(req.params.id, req.body)
+    .then(recipe => res.json( { msg: "Deleted" }))
+    .catch(err => res.status(404).json({error: "None found"})); 
 });
 
 module.exports = router;

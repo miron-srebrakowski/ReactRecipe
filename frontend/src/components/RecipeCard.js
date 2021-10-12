@@ -9,13 +9,14 @@ export default function RecipeCard (props) {
     const deleteRecipe = () => {
         axios.delete('http://localhost:4000/recipes/delete-recipe/' + props.recipe._id)
         .then((res) => {
-            console.log("Recipe successfully deleted!")
+            console.log("Recipe successfully deleted!");
+            alert("Recipe deleted!");
         })
         .catch((err) => {console.log(err);});
     }
 
     return (
-        <div className="col-4">
+        <div className="col-4 my-4">
             <div className="card mb-4 box-shadow m-3" key={props.recipe._id}>       
                 <h4 className=" text-center m-4">     
                     {props.recipe.title}
@@ -27,19 +28,14 @@ export default function RecipeCard (props) {
                 alt="food"
                 />
 
-                <div className="text-right">
-                    <ul>
-                        <li >{props.recipe.ingredients}</li>
-                    </ul>
-                    
-                    <ol> 
-                        <li >{props.recipe.method}</li>
-                    </ol>
+                <div className="m-2">
+                    <p className="text-center">{props.recipe.description}</p>
+                    <h6 className="text-right"><i> Recipe by: {props.recipe.author}</i></h6>
                 </div>
 
                 <div className="text-center">
                     <Link to={`/edit-recipe/${props.recipe._id}`}>
-                        <button className="left-btn btn btn-success">Edit</button>
+                        <button className="left-btn btn btn-success">View Recipe</button>
                     </Link>
 
                     <button className="right-btn btn btn-danger" onClick={deleteRecipe}>Delete</button>

@@ -7,11 +7,17 @@ let recipeSchema = new mongoose.Schema({
     image: {
       type: String  
     },
-    ingredients: {
+    description: {
       type: String 
     },
-    method: {
+    author: {
       type: String 
+    },
+    ingredients: {
+      type: [String] 
+    },
+    method: {
+      type: [String] 
     }
   }, {
     collection: 'recipes'

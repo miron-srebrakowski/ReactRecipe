@@ -34,7 +34,7 @@ export default function RecipeCard (props) {
                 </div>
 
                 <div className="text-center">
-                    <Link to={`/edit-recipe/${props.recipe._id}`}>
+                    <Link to={`/view-recipe/${props.recipe._id}`}>
                         <button className="left-btn btn btn-success">View Recipe</button>
                     </Link>
 

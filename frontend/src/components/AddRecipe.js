@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-export default function AddRecipe () {
+export default function AddRecipe (props) {
 
     const [title, setTitle] = useState('');
     const [image, setImage] = useState('');
@@ -42,6 +42,8 @@ export default function AddRecipe () {
         setAuthor('');
         setIngredients([]);
         setMethod([]);
+
+        props.history.push("/");
     };
 
     const addIngredient = () => {

@@ -29,8 +29,8 @@ export default function DisplayAllRecipes () {
     }
 
     return (
-        <div className="container">
-            <div className="jumboton text-center m-4">
+        <div className="container main-page">
+            <div className="jumboton text-center my-4 p-4">
                 <h1>Janusz Pizza</h1>
 
                 <p>
@@ -38,12 +38,13 @@ export default function DisplayAllRecipes () {
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                     when an unknown printer took a galley of type and scrambled it to make a type 
                  </p>
-            </div>
 
-            <div className="d-flex justify-content-center my-4">
+                 <div className="d-flex justify-content-center my-4">
                 <Link to="/create-recipe">
                     <button className="btn btn-success">Add recipe</button>
                 </Link>
+            </div>
+
             </div>
 
             <div className="row">{ recipeList }</div>

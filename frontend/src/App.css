@@ -1,3 +1,8 @@
+
+:root {
+    --wood-bg: url("https://image.jimcdn.com/app/cms/image/transf/none/path/s5ce9464248bd2b1d/backgroundarea/i316fb8afc56efe9a/version/1580169883/image.jpg");
+    --card-bg: url("https://cdn.shopify.com/s/files/1/0997/9924/products/image1_6_1536x.JPG?v=1476651583");
+}
 .left-btn {
     position: absolute;
     left: 0px;
@@ -10,3 +15,24 @@
     width: 50%;
 }
 
+.recipe-card {
+    background-image: var(--card-bg); 
+}
+
+.main-page {
+    background-image: var(--wood-bg);
+
+}
+
+.jumboton {
+    background-color: antiquewhite;
+}
+
+.recipe-page {
+    background-image: var(--card-bg);
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}

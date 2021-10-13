@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
 
 
 export default function RecipeCard (props) {
@@ -17,7 +16,7 @@ export default function RecipeCard (props) {
 
     return (
         <div className="col-4 my-4">
-            <div className="card mb-4 box-shadow m-3" key={props.recipe._id}>       
+            <div className="card mb-4 box-shadow m-3 recipe-card" key={props.recipe._id}>       
                 <h4 className=" text-center m-4">     
                     {props.recipe.title}
                 </h4>

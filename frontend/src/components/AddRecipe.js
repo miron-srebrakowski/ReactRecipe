@@ -75,7 +75,7 @@ export default function AddRecipe (props) {
     }
     
     return (
-        <div className="container">
+        <div className="container recipe-page">
 
             <h4 className="float-left p-4">Add new recipe</h4>
 
@@ -107,7 +107,7 @@ export default function AddRecipe (props) {
                     <div>
                         <label >Ingredients</label>
                         <input type="text" className="form-control" value={currentIngredient} onChange={(e) => setCurrentIngredient(e.target.value)}/>
-                        <button className="btn btn-success m-3" onClick={addIngredient}>+</button>
+                        <button className="btn btn-success m-3" onClick={addIngredient}>+ Add</button>
                         <ul>
                             { ingredientsList }
                         </ul>
@@ -116,7 +116,7 @@ export default function AddRecipe (props) {
                     <div>
                         <label >Method</label>
                         <input type="text" className="form-control" value={step} onChange={(e) => setStep(e.target.value)}/>
-                        <button className="btn btn-success m-3" onClick={addStep}>+</button>
+                        <button className="btn btn-success m-3" onClick={addStep}>+ Add</button>
                         <ol>
                             { methodList }
                         </ol>

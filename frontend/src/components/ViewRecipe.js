@@ -33,7 +33,7 @@ export default function ViewRecipe (props) {
     
     
     return (
-        <div className="container">
+        <div className="container recipe-page">
             <div className="row">
                 <div className="col-5">
                     <h1>{ recipe.title }</h1>

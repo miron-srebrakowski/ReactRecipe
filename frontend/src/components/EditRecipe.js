@@ -85,9 +85,9 @@ export default function EditRecipe (props) {
     }
     
     return (
-        <div className="container">
+        <div className="container recipe-page">
 
-            <h4 className="float-left p-4">Add new recipe</h4>
+            <h4 className="float-left p-4">Edit recipe</h4>
 
             <div className="row">
 
@@ -117,7 +117,7 @@ export default function EditRecipe (props) {
                     <div>
                         <label >Ingredients</label>
                         <input type="text" className="form-control" value={currentIngredient} onChange={(e) => setCurrentIngredient(e.target.value)}/>
-                        <button className="btn btn-success m-3" onClick={addIngredient}>+</button>
+                        <button className="btn btn-success m-3" onClick={addIngredient}>+ Add</button>
                         <button className="btn btn-danger m-3" onClick={() => setIngredients([])}>Reset ingredients</button>
                         <ul>
                             { ingredientsList }
@@ -127,7 +127,7 @@ export default function EditRecipe (props) {
                     <div>
                         <label >Method</label>
                         <input type="text" className="form-control" value={step} onChange={(e) => setStep(e.target.value)}/>
-                        <button className="btn btn-success m-3" onClick={addStep}>+</button>
+                        <button className="btn btn-success m-3" onClick={addStep}>+ Add</button>
                         <button className="btn btn-danger m-3" onClick={() => setMethod([])}>Reset method</button>
                         <ol>
                             { methodList }

@@ -140,7 +140,7 @@ export default function EditRecipe (props) {
             </div>
 
             <Link to={`/view-recipe/${props.match.params.id}`}>
-                <button>Back</button>
+                <button className="btn btn-secondary m-4">Back</button>
             </Link>
         </div>
     );

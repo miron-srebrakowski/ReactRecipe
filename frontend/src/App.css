@@ -2,6 +2,8 @@
 :root {
     --wood-bg: url("https://image.jimcdn.com/app/cms/image/transf/none/path/s5ce9464248bd2b1d/backgroundarea/i316fb8afc56efe9a/version/1580169883/image.jpg");
     --card-bg: url("https://cdn.shopify.com/s/files/1/0997/9924/products/image1_6_1536x.JPG?v=1476651583");
+    --cloth-bg: url("https://media.istockphoto.com/photos/closeup-elegant-crumpled-of-white-silk-fabric-cloth-background-and-picture-id1170919626?k=20&m=1170919626&s=612x612&w=0&h=Qup_uZB4l9yf1Shd9w2P6G5uG9KnYl8tpmcDM7pjKgU=");
+    --plate: url("https://www.fuerstenberg-porzellan.com/out/pictures/generated/product/1/320_320_90/fl200532weiss_gourmetteller.png");
 }
 .left-btn {
     position: absolute;
@@ -15,22 +17,26 @@
     width: 50%;
 }
 
+
 .recipe-card {
     background-image: var(--card-bg); 
+    border-width: 0.75mm;
 }
 
 .main-page {
-    background-image: var(--wood-bg);
+    background-color: rgb(252, 245, 227);
 
 }
 
 .jumboton {
-    background-color: antiquewhite;
+    background-image: var(--card-bg);
 }
 
 .recipe-page {
     background-image: var(--card-bg);
 }
+
+
 
 img {
     height: 300px;

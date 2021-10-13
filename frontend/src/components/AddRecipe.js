@@ -128,7 +128,7 @@ export default function AddRecipe (props) {
             </div>
 
             <Link to="/">
-                <button>Back</button>
+                <button className="btn btn-secondary m-4">Back</button>
             </Link>
         </div>
     );

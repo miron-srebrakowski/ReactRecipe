@@ -31,15 +31,15 @@ export default function DisplayAllRecipes () {
     return (
         <div className="container main-page">
             <div className="jumboton text-center my-4 p-4">
-                <h1>Janusz Pizza</h1>
+                <h1>Recipe book</h1>
 
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type 
+                    Store your favourite recipes and access them quickly when feeling like treating 
+                    yourself to something nice. Cooked something new you like? Great! Store it in 
+                    your recipe book below (remember to add a picture of how delicous it looked). 
                  </p>
 
-                 <div className="d-flex justify-content-center my-4">
+                 <div className="d-grid justify-content-center">
                 <Link to="/create-recipe">
                     <button className="btn btn-success">Add recipe</button>
                 </Link>
@@ -51,7 +51,7 @@ export default function DisplayAllRecipes () {
         
             <footer className="page-footer">
                 <div className="text-center footer-copyright p-3">
-                    Some footer info
+                    Created by: Miron Srebrakowski 
                 </div>
             </footer> 
 

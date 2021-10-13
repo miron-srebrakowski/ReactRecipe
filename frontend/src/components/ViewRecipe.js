@@ -57,10 +57,10 @@ export default function ViewRecipe (props) {
             </div>
 
             <Link to="/">
-                <button>Back</button>
+                <button className="btn btn-secondary">Back</button>
             </Link>
             <Link to={`/edit-recipe/${props.match.params.id}`}>
-                <button>Edit</button>
+                <button className="btn btn-primary m-4">Edit recipe</button>
             </Link>
         </div>
     );

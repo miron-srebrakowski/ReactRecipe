@@ -56,7 +56,7 @@ export default function ViewRecipe (props) {
         
             </div>
 
-            <Link to="/">
+            <Link to="/display-all">
                 <button className="btn btn-secondary">Back</button>
             </Link>
             <Link to={`/edit-recipe/${props.match.params.id}`}>

@@ -43,7 +43,7 @@ export default function AddRecipe (props) {
         setIngredients([]);
         setMethod([]);
 
-        props.history.push("/");
+        props.history.push("/display-all");
     };
 
     const addIngredient = () => {
@@ -127,7 +127,7 @@ export default function AddRecipe (props) {
 
             </div>
 
-            <Link to="/">
+            <Link to="/display-all">
                 <button className="btn btn-secondary m-4">Back</button>
             </Link>
         </div>

@@ -19,7 +19,7 @@ router.route('/create-recipe').post((req, res, next) => {
 
 
 // READ all Recipes
-router.route('/').get((req, res) => {
+router.route('/display-all').get((req, res) => {
     recipeSchema.find((err, data) => {
         if (err) {
             return next(err);

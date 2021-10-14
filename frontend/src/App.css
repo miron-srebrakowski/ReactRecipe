@@ -5,6 +5,13 @@
     --cloth-bg: url("https://media.istockphoto.com/photos/closeup-elegant-crumpled-of-white-silk-fabric-cloth-background-and-picture-id1170919626?k=20&m=1170919626&s=612x612&w=0&h=Qup_uZB4l9yf1Shd9w2P6G5uG9KnYl8tpmcDM7pjKgU=");
     --plate: url("https://www.fuerstenberg-porzellan.com/out/pictures/generated/product/1/320_320_90/fl200532weiss_gourmetteller.png");
 }
+
+.landing-page {
+    background-image: var(--card-bg);
+    height: 100vh;
+    
+}
+
 .left-btn {
     position: absolute;
     left: 0px;

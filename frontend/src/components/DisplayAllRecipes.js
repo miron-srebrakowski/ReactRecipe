@@ -8,7 +8,7 @@ export default function DisplayAllRecipes () {
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:4000/recipes/')
+        axios.get('http://localhost:4000/recipes/display-all')
         .then(res => {
             setRecipes(res.data);
         })

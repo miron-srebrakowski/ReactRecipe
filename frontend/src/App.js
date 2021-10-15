@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
@@ -7,10 +7,17 @@ import AddRecipe from './components/AddRecipe';
 import ViewRecipe from './components/ViewRecipe';
 import EditRecipe from './components/EditRecipe';
 import LandingPage from './components/LandingPage';
+import Login from './components/Login';
 
 
 
 export default function App() {
+  const [token, setToken] = useState();
+
+  if (!token) {
+    return <Login setToken={setToken} />
+  }
+
   return (
     <Router>
       <div>

@@ -6,9 +6,55 @@
     --plate: url("https://www.fuerstenberg-porzellan.com/out/pictures/generated/product/1/320_320_90/fl200532weiss_gourmetteller.png");
 }
 
+body{
+    background: rgb(252, 245, 227);
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(252, 245, 227);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.nav-buttons {
+    margin: 0.25vh;
+}
+
+.nav-buttons a {
+    margin: 1vh;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-buttons a:hover {
+    color: green;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+
+}
+
+.example-recipe {
+    display: block;
+    width: 75%;
+    height: 75%;
+    margin: 5%;
+    border-radius: 2.5%;
+}
+
 .landing-page {
     background-image: var(--card-bg);
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     
 }
 
@@ -37,10 +83,15 @@
 
 .jumboton {
     background-image: var(--card-bg);
+    border-radius: 5%;
 }
 
 .recipe-page {
     background-image: var(--card-bg);
+    border-radius: 5%;
+    padding: 4%;
+    margin: 5%;
+
 }
 
 .login-wrapper {

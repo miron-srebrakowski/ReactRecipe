@@ -37,19 +37,26 @@ export default function DisplayAllRecipes () {
                     Store your favourite recipes and access them quickly when feeling like treating 
                     yourself to something nice. Cooked something new you like? Great! Store it in 
                     your recipe book below (remember to add a picture of how delicous it looked). 
-                 </p>
+                </p>
 
-                 <div className="d-grid justify-content-center">
-                <Link to="/create-recipe">
-                    <button className="btn btn-success">Add recipe</button>
-                </Link>
-            </div>
+                <div className="btn-group">
+                    <Link to="/">
+                        <button className="btn btn-primary mx-2">Home</button>
+                    </Link>
+                    
+                    <Link to="/create-recipe">
+                        <button className="btn btn-success mx-2">Add recipe</button>
+                    </Link>
+                </div>
 
             </div>
 
             <div className="row">{ recipeList }</div>
+
+            <hr />
+            <hr />
         
-            <footer className="page-footer">
+            <footer className="page-footer m-4">
                 <div className="text-center footer-copyright p-3">
                     Created by: Miron Srebrakowski 
                 </div>

@@ -6,8 +6,15 @@ export default function LandingPage () {
     return (
         <div className="container text-center landing-page">
 
-            <div className="row">
-                <div className="col-5 p-4">
+            <div className="navbar">
+                <h3 className="nav-buttons">
+                    <a href="/login">Login</a>
+                    <a href="/contact-me">Contact Me</a>
+                </h3>
+            </div>
+
+            <div className="row my-4">
+                <div className="col-5 p-4 my-4">
                     <h1 className="p-4"> Recipe App </h1>
 
                     <img
@@ -17,7 +24,7 @@ export default function LandingPage () {
                     />
                 </div>
 
-                <div className="col-5 p-4">
+                <div className="col-5 p-4 my-4">
                     <p className="my-4 py-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -32,7 +39,6 @@ export default function LandingPage () {
                     <Link to="/display-all">
                         <button className="btn btn-primary m-4">View all recipes</button>
                     </Link>
-
                     <Link to="/login">
                         <button className="btn btn-primary m-4">Login</button>
                     </Link>
@@ -40,8 +46,14 @@ export default function LandingPage () {
             </div>
             
 
-            
-            
+            <hr />
+            <hr />
+
+            <div className="img-box">
+            <img className="example-recipe" 
+            src="https://raw.githubusercontent.com/miron-srebrakowski/miron-srebrakowski.github.io/main/images/recipe.png" />
+            </div>
+
             <hr />
             <hr />
             

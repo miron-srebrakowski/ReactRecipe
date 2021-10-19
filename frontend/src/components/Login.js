@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 async function loginUser(credentials) {
     return fetch('http://localhost:4000/login', {
@@ -12,7 +13,7 @@ async function loginUser(credentials) {
       .then(data => data.json())
    }
 
-export default function Login ({ setToken }) {
+export default function Login ({ setToken, setLoggedIn }) {
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
 
@@ -23,6 +24,8 @@ export default function Login ({ setToken }) {
           password
         });
         setToken(token);
+        setLoggedIn(true);
+
       }
 
     return (
@@ -38,7 +41,9 @@ export default function Login ({ setToken }) {
                     <input type="password" onChange={e => setPassword(e.target.value)}/>
                 </label>
                 <div>
-                    <button type="submit">Submit</button>
+                    <Link to="/display-all">
+                      <button type="submit">Submit</button>
+                    </Link>
                 </div>
             </form>
         </div>

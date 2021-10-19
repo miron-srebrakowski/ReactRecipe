@@ -84,6 +84,8 @@ body{
 .jumboton {
     background-image: var(--card-bg);
     border-radius: 5%;
+    margin-top: 3%;
+    margin-bottom: 4%;
 }
 
 .recipe-page {

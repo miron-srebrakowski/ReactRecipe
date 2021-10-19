@@ -30,7 +30,7 @@ export default function DisplayAllRecipes () {
 
     return (
         <div className="container main-page">
-            <div className="jumboton text-center my-4 p-4">
+            <div className="jumboton text-center p-4">
                 <h1>Recipe book</h1>
 
                 <p>
@@ -50,6 +50,10 @@ export default function DisplayAllRecipes () {
                 </div>
 
             </div>
+
+            <hr />
+            <hr />
+            
 
             <div className="row">{ recipeList }</div>
 

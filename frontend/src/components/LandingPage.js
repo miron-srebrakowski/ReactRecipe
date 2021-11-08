@@ -36,11 +36,8 @@ export default function LandingPage () {
 
                     <br />
 
-                    <Link to="/display-all">
-                        <button className="btn btn-primary m-4">View all recipes</button>
-                    </Link>
                     <Link to="/login">
-                        <button className="btn btn-primary m-4">Login</button>
+                        <button className="btn btn-primary m-4">Login to view recipes</button>
                     </Link>
                 </div>
             </div>

@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function LandingPage () {
 
     const { user, isAuthenticated } = useAuth0();
+    const [mealImage, setMealImage] = useState();
+    const [mealTitle, setMealTitle] = useState();
+    const [mealTutorial, setMealTutorial] = useState();
+
+    useEffect(() => {
+        axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
+        .then(res => {
+            const data = res.data.meals[0]
+            setMealImage(data.strMealThumb);
+            setMealTitle(data.strMeal);  
+            setMealTutorial(data.strYoutube);
+        })
+        .catch(err => {
+            console.log("Error in getting API image!" + err);
+        })
+    }, [])
 
     return (
         <div className="container text-center landing-page">
@@ -61,8 +78,11 @@ export default function LandingPage () {
             <hr />
 
             <div className="img-box">
-            <img className="example-recipe" 
-            src="https://raw.githubusercontent.com/miron-srebrakowski/miron-srebrakowski.github.io/main/images/recipe.png" />
+                <h4>{ mealTitle }</h4>
+                <a href= { mealTutorial } target="_blank">
+                    <button className="btn btn-secondary">View instructions</button>
+                </a>
+                <img className="example-recipe" src={ mealImage } /> 
             </div>
 
             <hr />

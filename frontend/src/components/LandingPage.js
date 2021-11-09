@@ -1,7 +1,12 @@
 import React from "react";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 
 export default function LandingPage () {
+
+    const { user, isAuthenticated } = useAuth0();
 
     return (
         <div className="container text-center landing-page">
@@ -15,8 +20,8 @@ export default function LandingPage () {
 
             <div className="row my-4">
                 <div className="col-5 p-4 my-4">
-                    <h1 className="p-4"> Recipe App </h1>
-
+                    {!isAuthenticated && (<h1 className="p-4"> Welcome to Recipe Finder </h1>)}
+                    {isAuthenticated && (<h1 className="p-4"> Hello {user.name}! </h1>)}
                     <img
                     src="https://spoonacular.com/application/frontend/images/food-api/ontology2.svg"
                     className="img-rounded img-responsive text-center m-2"
@@ -36,9 +41,18 @@ export default function LandingPage () {
 
                     <br />
 
-                    <Link to="/login">
-                        <button className="btn btn-primary m-4">Login to view recipes</button>
-                    </Link>
+                    {!isAuthenticated && ( <LoginButton /> )}
+                    
+                    {isAuthenticated && (
+                        <>
+                        <Link to="/display-all">
+                            <button className="btn btn-primary m-4"> View recipes </button>
+                        </Link>
+                        
+                        <LogoutButton />
+                        </>
+                    )}
+                    
                 </div>
             </div>
             

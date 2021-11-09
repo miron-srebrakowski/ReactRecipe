@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import RecipeCard from "./RecipeCard";
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function DisplayAllRecipes () {
 
+    const { user } = useAuth0();
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
@@ -31,7 +33,7 @@ export default function DisplayAllRecipes () {
     return (
         <div className="container main-page">
             <div className="jumboton text-center p-4">
-                <h1>Recipe book</h1>
+                <h1>{user.name}'s Recipes</h1>
 
                 <p>
                     Store your favourite recipes and access them quickly when feeling like treating 

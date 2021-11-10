@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
+import InterestBar from "./InterestBar";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -73,7 +74,8 @@ export default function LandingPage () {
                 </div>
             </div>
             
-
+            <InterestBar />
+            
             <hr />
             <hr />
 

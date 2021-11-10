@@ -37,6 +37,12 @@ body{
     color: green;
 }
 
+.interest-bar {
+    flex-direction: row;
+    
+}
+
+
 .img-box {
     display: flex;
     justify-content: center;

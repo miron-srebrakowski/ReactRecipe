@@ -4,10 +4,12 @@
     --card-bg: url("https://cdn.shopify.com/s/files/1/0997/9924/products/image1_6_1536x.JPG?v=1476651583");
     --cloth-bg: url("https://media.istockphoto.com/photos/closeup-elegant-crumpled-of-white-silk-fabric-cloth-background-and-picture-id1170919626?k=20&m=1170919626&s=612x612&w=0&h=Qup_uZB4l9yf1Shd9w2P6G5uG9KnYl8tpmcDM7pjKgU=");
     --plate: url("https://www.fuerstenberg-porzellan.com/out/pictures/generated/product/1/320_320_90/fl200532weiss_gourmetteller.png");
+    --backStyle: url("https://image.freepik.com/free-vector/white-abstract-wallpaper_23-2148830027.jpg");
 }
 
 body{
-    background: rgb(252, 245, 227);
+    background: var(--backStyle);
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
 /* NAVBAR */
@@ -38,9 +40,27 @@ body{
 }
 
 .interest-bar {
-    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 10px 10px 5px grey;
     
 }
+
+.name-field {
+    float: left;
+    width: 45%;
+}
+
+.email-field {
+    width: 45%;
+}
+
+.interest-submit {
+    width: 20%;
+    float: right;
+}
+
 
 
 .img-box {
@@ -54,11 +74,14 @@ body{
     width: 75%;
     height: 75%;
     margin: 5%;
-    border-radius: 2.5%;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 100px;
+    
 }
 
 .landing-page {
-    background-image: var(--card-bg);
+    background-color: whitesmoke;
     height: 100%;
     width: 100%;
     
@@ -87,7 +110,7 @@ body{
 
 }
 
-.jumboton {
+.jumboton-main {
     background-image: var(--card-bg);
     border-radius: 5%;
     margin-top: 3%;

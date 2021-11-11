@@ -6,15 +6,16 @@ export default function InterestBar () {
     const [userEmail, setUserEmail] = useState();
 
     return (
-        <div className="row">
-            <p className="col-4">Please register interest!</p>
-            <form className="col-7"> 
-                <input type="text" className="form-control" placeholder="Name"
+        <div className="jumboton interest-bar m-4 row">
+            
+            <form className="col-8 mx-5"> 
+                <input type="text" className="form-control m-3 name-field" placeholder="Name"
                 value={userName} onChange={(e) => setUserName(e.target.value)} />            
-                <input type="text" className="form-control" placeholder="Email"
+                <input type="text" className="form-control m-3 email-field" placeholder="Email"
                 value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
-                <button type="submit" className="btn btn-primary">Subscribe</button>
+                
             </form>
+            <button className="btn btn-primary my-3 interest-submit col-4">Register interest!</button>
         </div>
     )
 }

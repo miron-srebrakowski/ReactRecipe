@@ -29,12 +29,6 @@ export default function LandingPage () {
     return (
         <div className="container text-center landing-page">
 
-            <div className="navbar">
-                <h3 className="nav-buttons">
-                    <a href="/login">Login</a>
-                    <a href="/contact-me">Contact Me</a>
-                </h3>
-            </div>
 
             <div className="row my-4">
                 <div className="col-5 p-4 my-4">
@@ -48,13 +42,20 @@ export default function LandingPage () {
                 </div>
 
                 <div className="col-5 p-4 my-4">
-                    <p className="my-4 py-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                    qui officia deserunt mollit anim id est laborum.
+                    <p className="my-2 py-4">
+                    If you're tired of writing down your favourite recipes and losing them or simply want
+                    a place where you can store, edit and access your instructions when cooking or anytime
+                    for that matter? Then you've come to the right place! Recipe Finder is a simple to use web application
+                    which allows you to store, edit and share your favourite culinary recipes and have them
+                    easily accessible whenever you neeed.
+                    </p>
+                    <p>
+                    <strong>Interested?</strong> Let me know below and I'll set you up
+                    with your own recipe book! 
+                    </p>
+                    <p>
+                    <strong>Need inspiration?</strong> Check out the recipe suggestions
+                    along with video cooking tutorials below!  
                     </p>
 
                     <br />
@@ -80,8 +81,8 @@ export default function LandingPage () {
             <hr />
 
             <div className="img-box">
-                <h4>{ mealTitle }</h4>
-                <a href= { mealTutorial } target="_blank">
+                <h4 className="my-2">{ mealTitle }</h4>
+                <a className="my-4" href= { mealTutorial } target="_blank">
                     <button className="btn btn-secondary">View instructions</button>
                 </a>
                 <img className="example-recipe" src={ mealImage } /> 

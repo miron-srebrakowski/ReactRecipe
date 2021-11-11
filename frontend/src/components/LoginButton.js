@@ -6,7 +6,7 @@ export default function LoginButton () {
 
     return (
         <button className="btn btn-primary m-4" onClick={() => loginWithRedirect()}>
-            Log In
+            <strong>Log In</strong> to view your recipes
         </button>
     )
 }

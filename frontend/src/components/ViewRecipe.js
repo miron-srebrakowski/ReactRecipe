@@ -33,35 +33,39 @@ export default function ViewRecipe (props) {
     
     
     return (
-        <div className="container recipe-page">
-            <div className="row">
-                <div className="col-5">
-                    <h1>{ recipe.title }</h1>
-                    <img
-                    src={ recipe.image }
-                    className="img-rounded img-responsive text-center m-2"
-                    alt="food"
-                    />
+        <div className="container">
+            <div className="recipe-page">
+                <div className="row">
+                
+                    <div className="col-lg-5">
+                        <h1>{ recipe.title }</h1>
+
+                        <img
+                        src={ recipe.image }
+                        className="img-rounded img-responsive text-center"
+                        alt="food"
+                        />
+
                     <h6>Recipe by: { recipe.author }</h6>
+                    </div>
 
+                    <div className="col-lg-7 my-5">
+                        <h4>Ingredients:</h4>
+                        <ul>{ ingredientsList }</ul>
+                        <br/>
+                        <h4>Method:</h4>
+                        <ol>{ methodList }</ol>
+                    </div>
+            
                 </div>
 
-                <div className="col-5 my-5">
-                    <h4>Ingredients:</h4>
-                    <ul>{ ingredientsList }</ul>
-                    <br/>
-                    <h4>Method:</h4>
-                    <ol>{ methodList }</ol>
-                </div>
-        
+                <Link to="/display-all">
+                    <button className="btn btn-secondary">Back</button>
+                </Link>
+                <Link to={`/edit-recipe/${props.match.params.id}`}>
+                    <button className="btn btn-primary m-4">Edit recipe</button>
+                </Link>
             </div>
-
-            <Link to="/display-all">
-                <button className="btn btn-secondary">Back</button>
-            </Link>
-            <Link to={`/edit-recipe/${props.match.params.id}`}>
-                <button className="btn btn-primary m-4">Edit recipe</button>
-            </Link>
         </div>
     );
 } 

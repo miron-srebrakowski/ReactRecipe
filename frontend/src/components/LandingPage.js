@@ -29,9 +29,8 @@ export default function LandingPage () {
     return (
         <div className="container text-center landing-page">
 
-
             <div className="row my-4">
-                <div className="col-5 p-4 my-4">
+                <div className="col-lg-5 p-4 my-4">
                     {!isAuthenticated && (<h1 className="p-4"> Welcome to Recipe Finder </h1>)}
                     {isAuthenticated && (<h1 className="p-4"> Hello {user.name}! </h1>)}
                     <img
@@ -41,7 +40,7 @@ export default function LandingPage () {
                     />
                 </div>
 
-                <div className="col-5 p-4 my-4">
+                <div className="col-lg-5 p-4 my-4">
                     <p className="my-2 py-4">
                     If you're tired of writing down your favourite recipes and losing them or simply want
                     a place where you can store, edit and access your instructions when cooking or anytime

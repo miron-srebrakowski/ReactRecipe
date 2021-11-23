@@ -15,21 +15,23 @@ export default function RecipeCard (props) {
     }
 
     return (
-        <div className="col-4 my-4">
+        <div className="col-lg-4 my-4">
             <div className="card mb-4 box-shadow m-3 recipe-card" key={props.recipe._id}>       
                 <h4 className=" text-center m-4">     
                     {props.recipe.title}
                 </h4>
 
-                <img
-                src={props.recipe.image}
-                className="img-rounded img-responsive text-center m-2"
-                alt="food"
-                />
+                <div className="row">
+                    <img
+                    src={props.recipe.image}
+                    className="img-rounded img-responsive text-center m-2 col-11"
+                    alt="food"
+                    />
 
-                <div className="m-2">
-                    <p className="text-center">{props.recipe.description}</p>
-                    <h6 className="text-right"><i> Recipe by: {props.recipe.author}</i></h6>
+                    <div className="m-2 col-11">
+                        <p className="text-center">{props.recipe.description}</p>
+                        <h6 className="text-right"><i> Recipe by: {props.recipe.author}</i></h6>
+                    </div>
                 </div>
 
                 <div className="text-center">
@@ -37,7 +39,7 @@ export default function RecipeCard (props) {
                         <button className="left-btn btn btn-success">View Recipe</button>
                     </Link>
 
-                    <button className="right-btn btn btn-danger" onClick={deleteRecipe}>Delete</button>
+                    <button className="right-btn btn btn-danger" onClick={deleteRecipe} disabled>Delete</button>
                 </div>
             </div>
         </div>

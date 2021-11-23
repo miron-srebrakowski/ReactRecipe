@@ -31,7 +31,7 @@ export default function DisplayAllRecipes () {
     }
 
     return (
-        <div className="container main-page">
+        <div className="container">
             <div className="jumboton-main text-center p-4">
                 <h1>{user.name}'s Recipes</h1>
 

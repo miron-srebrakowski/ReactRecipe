@@ -13,7 +13,6 @@ export default function DisplayAllRecipes () {
         axios.get('http://localhost:4000/recipes/display-all')
         .then(res => {
             setRecipes(res.data);
-            console.log("Success")
         })
         .catch(err => {
             console.log("Error in DisplayAllRecipes!" + err);
